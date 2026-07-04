@@ -149,4 +149,5 @@ pnpm web:debug   # stage + full operator console (VITE_DEBUG_UI=1)
 
 - **[AGENTS.md](./AGENTS.md)** — the source of truth for implementers (architecture, stack decisions, gotchas).
 - **[ZOOM-SETUP.md](./ZOOM-SETUP.md)** — Zoom Meeting SDK setup track.
-- **[bot/README.md](./bot/README.md)** — the Zoom bot's own build & run guide.
+- **[CURSOR-SDK-BRIEF.md](./CURSOR-SDK-BRIEF.md)** — the `call_agent` sub-agent engine.
+- **[bot/CLAUDE.md](./bot/CLAUDE.md)** — the Zoom bot container's adapter contract.

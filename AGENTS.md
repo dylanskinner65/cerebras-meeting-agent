@@ -20,7 +20,7 @@ for LOCAL use only — no Zoom.** Zoom is a later adapter swap.
 ## Stack (decided, source-verified)
 
 - **LLM** — `openai` npm → baseURL `https://api.cerebras.ai/v1`, model `gemma-4-31b`. **Accumulate streamed `tool_calls` by `index`** (Cerebras quirk).
-- **Sub-agent** — `@cursor/sdk` (native TS). Mocked first (fixed FINDINGS.html), real later.
+- **Sub-agent** — `@cursor/sdk` (native TS). Mocked first (fixed FINDINGS.html), real later. Brief: CURSOR-SDK-BRIEF.md.
 - **STT** — Moonshine (`onnx-community/moonshine-base-ONNX`) via `@huggingface/transformers` 3.8.1, **`device:'cpu'`** (verified running locally, on-device). NOTE: transformers.js 3.8.1 has **no `'coreml'` device string** — ANE/CoreML would need an onnxruntime-node execution-provider config, a later optimization. **No hosted fallback.**
 - **TTS** — `kokoro-js` (on-device, ~sub-1s/sentence). **No hosted fallback.**
 - **VAD** — `@ricky0123/vad-node` (pin `onnxruntime-node`).
@@ -80,5 +80,6 @@ transcript needs). **Decision: Option A** (our own WS subscribe/render). Copy:
 
 - **AGENTS.md** (this) + **the plan** — SOURCE OF TRUTH.
 - **README.md** — project overview (architecture diagrams, quick start).
+- **CURSOR-SDK-BRIEF.md** — CURRENT (the chosen sub-agent engine).
 - **ZOOM-SETUP.md** — CURRENT, Phase-2 Zoom track (Dylan; not in the local build).
-- **bot/README.md** — the Zoom bot's own build & run guide.
+- **bot/CLAUDE.md** — the Zoom bot container's adapter contract.
